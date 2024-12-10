@@ -1,0 +1,129 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: Chinese Rocks;
+	margin: 0;
+}
+
+.App {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	position: relative;
+	width: 100vw;
+	overflow: hidden;
+	cursor: none;
+}
+
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(255, 119, 0, 0.068), rgba(255, 119, 0, 0.445) 70%);
+    filter: blur(70px);
+}
+
+.timer {
+    color: white;
+	font-family: Chinese Rocks, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    position: fixed;
+    text-align: center;
+    top: 1vh;
+    width: 100%;
+    z-index: 10;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 
+        1px 1px 2px black,
+        -1px -1px 2px black, 
+        1px -1px 2px black, 
+        -1px 1px 2px black;
+}
+  
+.circle-container {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.circle {
+    align-items: center;
+    animation: pulse 1s infinite, moveCircle linear infinite;
+    background: radial-gradient(circle, #3535356c, #000000c4);
+    border: 2px solid #ff0000c4;
+    border-radius: 50%;
+    color: #fff;
+    cursor: crosshair;
+    display: flex;
+	font-family: Chinese Rocks, sans-serif;
+    font-size: 1.5rem;
+    height: 50px;
+    justify-content: center;
+    position: absolute;
+    width: 50px;
+    will-change: transform;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 #ff0000c4;
+		transform: scale(1)
+	}
+
+	70% {
+		box-shadow: 0 0 0 20px #fe000000;
+		transform: scale(2)
+	}
+
+	to {
+		box-shadow: 0 0 0 0 #fe000000;
+		transform: scale(1)
+	}
+}
+
+@keyframes pulseCursor {
+	0% {
+		box-shadow: 0 0 0 0 #ff0000c4;
+		transform: scale(.5)
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px #fe000000;
+		transform: scale(1)
+	}
+
+	to {
+		box-shadow: 0 0 0 0 #fe000000;
+		transform: scale(.5)
+	}
+}
+
+@keyframes moveCircle {
+	0% {
+		transform: translate(0)
+	}
+
+	25% {
+		transform: translate(100px, -50px)
+	}
+
+	50% {
+		transform: translate(-100px, 100px)
+	}
+
+	75% {
+		transform: translate(-50px, -100px)
+	}
+
+	to {
+		transform: translate(0)
+	}
+}
