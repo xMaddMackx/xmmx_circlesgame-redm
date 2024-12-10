@@ -14,12 +14,6 @@ Enjoy!
 - returns `true` for Success and `false` for Failed.
 
 
-IF YOU HAVE THE OLDER VERSION `xmmx_minigames` REMOVE IT, BUT BE SURE TO UPDATE YOUR
-SCRIPTS WITH THE NEW MINIGAME NAME / EXPORT `xmmx_circlesgame`. See config for more info.
-
-
-# If you enable Debug in the config.lua, you can test the minigames by using the commands below:
-
-# Be sure to check the config.lua. It has extra functions that you can customize to hide your Huds, Hide the Radar.
+If you enable Debug in the config.lua, you can test the minigames by using the commands below:
 
 # USAGE: See options at the bottom of the config.lua
